@@ -1,7 +1,8 @@
 import { NativeModules } from 'react-native';
 
 type IntentsType = {
-  multiply(a: number, b: number): Promise<number>;
+  getExtras(): Promise<Object>;
+  send(app: String): Promise<Boolean>;
 };
 
 const { Intents } = NativeModules;

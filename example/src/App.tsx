@@ -3,10 +3,10 @@ import { StyleSheet, View, Text } from 'react-native';
 import Intents from 'react-native-intents';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<Object | undefined>();
 
   React.useEffect(() => {
-    Intents.multiply(3, 7).then(setResult);
+    Intents.getExtras().then(setResult);
   }, []);
 
   return (
