@@ -15,7 +15,8 @@ import Intents from "react-native-intents";
 
 // ...
 
-const result = await Intents.multiply(3, 7);
+const result = await Intents.getExtras();
+Intents.send("com.example.reactnativeintents");
 ```
 
 ## Contributing
