@@ -6,14 +6,19 @@ RCT_EXPORT_MODULE()
 
 // Example method
 // See // https://facebook.github.io/react-native/docs/native-modules-ios
-RCT_REMAP_METHOD(multiply,
-                 multiplyWithA:(nonnull NSNumber*)a withB:(nonnull NSNumber*)b
+RCT_REMAP_METHOD(getExtras,
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 {
-  NSNumber *result = @([a floatValue] * [b floatValue]);
+  resolve(null);
+}
 
-  resolve(result);
+RCT_REMAP_METHOD(send,
+                 appName:(nonnull NSString*)app
+                 withResolver:(RCTPromiseResolveBlock)resolve
+                 withRejecter:(RCTPromiseRejectBlock)reject)
+{
+  resolve(false);
 }
 
 @end
