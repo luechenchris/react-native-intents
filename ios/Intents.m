@@ -10,7 +10,7 @@ RCT_REMAP_METHOD(getExtras,
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 {
-  resolve(null);
+  resolve(nil);
 }
 
 RCT_REMAP_METHOD(send,
